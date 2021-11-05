@@ -16,7 +16,7 @@ export default function Header() {
             align='center'
             px={4}
         >
-            <InputSearch />
+            <InputSearch showPlaceHolder={isWideScreen}/>
             
             <Spacer />
 

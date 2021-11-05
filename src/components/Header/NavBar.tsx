@@ -1,5 +1,6 @@
-import { Box, HStack, VStack, Circle, Text, Icon, Avatar } from '@chakra-ui/react'
+import { Box, HStack, VStack, Text, Avatar } from '@chakra-ui/react'
 import { FiBell, FiMessageSquare, FiPlus, FiSettings, FiChevronDown } from 'react-icons/fi'
+import NavIcon from './NavIcon'
 
 interface NavBarProps {
     showNavBar: boolean
@@ -7,52 +8,42 @@ interface NavBarProps {
 
 export default function NavBar({ showNavBar = true }: NavBarProps) {
     return (
-        <Box>
-            <HStack>
-                <Box>
-                    <HStack>
-                        <Avatar bg="pink.500" size='sm' name="Yargo Valério" src="" />
-                        <VStack>
-                            {showNavBar ?
+        <HStack>
+            <Box>
+                <HStack
+                    px={2}
+                    borderRadius="10px"
+                    transition='background 0.2s'
+                    _hover={{
+                        background: "gray.700"
+                    }}>
+                    <Avatar bg="pink.500" size='sm' name="Yargo Valério" src="https://avatars.githubusercontent.com/yargo11" />
+                    <VStack spacing={0} overflow="hidden" maxW='200px'>
+                        {
+                            showNavBar ?
                                 <>
                                     <Text>Yargo Valério</Text>
-                                    <Text as='h6'>yagovale@hotmail.com</Text>
+                                    <Text as='h6' isTruncated>yagovale@hotmail.com</Text>
                                 </>
                                 :
                                 <>
                                 </>
+                        }
+                    </VStack>
+                </HStack>
+            </Box>
 
-                            }
+            {showNavBar ?
+                <>
+                    <NavIcon icone={FiPlus} />
+                    <NavIcon icone={FiMessageSquare} />
+                    <NavIcon icone={FiBell} />
+                    <NavIcon icone={FiSettings} />
+                </>
+                :
+                <NavIcon icone={FiChevronDown} />
+            }
 
-                        </VStack>
-                    </HStack>
-                </Box>
-
-                {showNavBar ?
-                    <>
-                        <Circle size='40px' bg='pink.700'>
-                            <Icon as={FiPlus} />
-                        </Circle>
-                        <Circle size='40px' bg='pink.700'>
-                            <Icon as={FiMessageSquare} />
-                        </Circle>
-                        <Circle size='40px' bg='pink.700'>
-                            <Icon as={FiBell} />
-                        </Circle>
-                        <Circle size='40px' bg='pink.700'>
-                            <Icon as={FiSettings} />
-                        </Circle>
-                    </>
-                    :
-                    <>
-                        <Circle size='40px' bg='pink.700'>
-                            <Icon as={FiChevronDown} />
-                        </Circle>
-                    </>
-
-                }
-
-            </HStack>
-        </Box>
+        </HStack>
     )
 }

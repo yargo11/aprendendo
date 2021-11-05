@@ -5,11 +5,13 @@ export const theme = extendTheme ({
         global:{
             body:{
                 bg: 'gray.900',
-                color: 'gray.50'
+                color: 'gray.50',
+                
             },
             h1:{
                 color: 'pink.500',
-                fontSize:'lg'
+                fontSize:'2rem',
+                fontWeight:'600'
             },
             h6:{
                 fontSize:'sm'

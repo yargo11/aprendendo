@@ -1,26 +1,22 @@
-import { Text, Flex, Center } from '@chakra-ui/react'
-import AspectRatioComponent from '../components/AspectRadio/index'
-import CenterComponent from '../components/Center/index'
-import ContainerComponent from '../components/Container/index'
+import { Text, Flex, Divider } from '@chakra-ui/react'
+import CoverAndAvatar from '../components/CoverAndAvatar'
 import Header from '../components/Header/index'
+import MyMenu from '../components/MyMenu'
 
 export default function Home() {
   return (
-    <>
-    <Header />
-      <Flex
-        borderColor="red.200"
-        borderWidth="1px"
-        w={["sm", "md", "lg", "xl", "2xl"]}
-        // h="500px"
-        mx="auto" my="1rem"
-        p={4}
+    <Flex
+      direction='column'
       >
-        <Text as='h1'>Sou um H1</Text>
+      <Header />
+      <CoverAndAvatar />
+      <Flex w='100%' justify='center' my={4}>
+        <Text as='h1'>
+          Yargo Valério
+        </Text>
       </Flex>
-      {/* <AspectRatioComponent /> */}
-      {/* <CenterComponent /> */}
-      <ContainerComponent />
-    </>
+      <Divider  maxW='90%' w="1250px" m='auto'/>
+      <MyMenu />
+    </Flex>
   )
 }
