@@ -1,7 +1,9 @@
 import { Text, Flex, Divider } from '@chakra-ui/react'
 import CoverAndAvatar from '../components/CoverAndAvatar'
 import Header from '../components/Header/index'
-import MyMenu from '../components/MyMenu'
+import Skills from '../components/Skills'
+import Projetos from '../components/Projetos'
+import Sobre from '../components/Sobre'
 
 export default function Home() {
   return (
@@ -16,7 +18,9 @@ export default function Home() {
         </Text>
       </Flex>
       <Divider  maxW='90%' w="1250px" m='auto'/>
-      <MyMenu />
+      <Sobre />
+      <Skills />
+      <Projetos />
     </Flex>
   )
 }

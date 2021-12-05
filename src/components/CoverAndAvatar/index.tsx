@@ -11,6 +11,7 @@ export default function CoverAndAvatar() {
                 mx='auto'
                 bgImage='../covers/synthwave-retrowave.gif'
                 bgRepeat='no-repeat'
+                bgPos='center'
                 bgSize='cover'
                 align='flex-end'
                 justify='center'

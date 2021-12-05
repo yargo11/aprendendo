@@ -10,11 +10,17 @@ export const theme = extendTheme ({
             },
             h1:{
                 color: 'pink.500',
-                fontSize:'2rem',
+                fontSize:['1.5rem','1.875rem','2.25rem'],
                 fontWeight:'600'
             },
-            h6:{
-                fontSize:'sm'
+            h2:{
+                color: 'pink.500',
+                fontSize:['1.5rem','1,75rem','2rem'],
+                fontWeight:'600'
+            },
+            h3:{
+                fontSize:['1rem','1.25rem','1,5rem'],
+                fontWeight:'600'
             }
         }
     }
